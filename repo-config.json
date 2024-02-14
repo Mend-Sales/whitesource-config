@@ -4,16 +4,19 @@
     "configExternalURL": "",
     "baseBranches": [],
     "enableLicenseViolations": true,
+    "displayLicenseViolations": "true",
     "enableReachability": true,
     "exploitability": true,
-    "releaseBranches": ["v.*"]
+    "releaseBranches": ["v.*"],
+    "enableIaC": "true"
   },
   "scanSettingsSAST": {
     "enableScan": true,
     "scanPullRequests": true,
     "incrementalScan": true,
     "baseBranches": [],
-    "snippetSize": 10
+    "snippetSize": 10,
+    "enableRemediation": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
@@ -47,10 +50,10 @@
   },
   "imageSettings": {
     "imageTracing": {
-      "enableImageTracingPR": false,
-      "addRepositoryCoordinate": false,
-      "addDockerfilePath": false,
-      "addMendIdentifier": false
+      "enableImageTracingPR": true,
+      "addRepositoryCoordinate": true,
+      "addDockerfilePath": true,
+      "addMendIdentifier": true
     }
   }
 }
